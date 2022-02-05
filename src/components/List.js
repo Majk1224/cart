@@ -12,9 +12,9 @@ function List(props) {
                     <span>价格：${item.price}</span>
                 </div>
                 <div>
-                    <button onClick={()=>props.changeNum(item.id, '+')}>+</button>
+                    <button className="add" onClick={()=>props.changeNum(item.id, '+')}>+</button>
                     <span>{item.num}</span>
-                    <button onClick={()=>props.changeNum(item.id, '-')}>-</button>
+                    <button className="red" onClick={()=>props.changeNum(item.id, '-')}>-</button>
                 </div>
             </li>
         })

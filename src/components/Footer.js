@@ -13,7 +13,7 @@ function Footer(props) {
         </div>
         <div>
             <span>总量: {totalNum}</span>
-            <span>总价：{totalPrice}</span>
+            <span>总价: {totalPrice}</span>
         </div>
         <button>支付</button>
     </div>

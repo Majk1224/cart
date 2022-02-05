@@ -1,7 +1,7 @@
 import React from 'react'
 import List from './components/List'
 import Footer from './components/Footer'
-import axios from 'axios'
+import { getList } from './services/'
 import './App.css';
 
 class App extends React.Component{
@@ -18,7 +18,7 @@ class App extends React.Component{
   }
 
   async componentDidMount(){
-    let result = await axios.get('/list');
+    let result = await getList();
     let list = result.data.data.list.map(item=>{
       return {...item, num: 0, checked: false, price: item.price.toFixed(2)}
     })
